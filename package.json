@@ -1,1 +1,22 @@
-
+{
+  "name": "discordstatusdashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "status.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tschanadam/discordstatusdashboard.git"
+  },
+  "author": "Adam Tschan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tschanadam/discordstatusdashboard/issues"
+  },
+  "homepage": "https://github.com/tschanadam/discordstatusdashboard#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1"
+  }
+}
