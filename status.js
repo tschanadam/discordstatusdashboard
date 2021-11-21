@@ -8,6 +8,7 @@ client.on('ready' () {
 fs.readFile('statusinfo.txt', function(err, data) {
     if(err) throw err;
     var statusArray = data.toString().split("\n");
+}
 
     setInterval(() => {
       client.user.setStatus(process.env.PRESENCE);
