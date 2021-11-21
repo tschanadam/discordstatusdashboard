@@ -1,21 +1,11 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
-const token = process.env.TOKEN;
-client.on('ready' () => {
-   console.log('Ready to go')
-  
-  var fs = require('fs');
-fs.readFile('statusinfo.txt', function(err, data) {
-    if(err) throw err;
-    var statusArray = data.toString().split("\n");
+const dotenv = require('dotenv');
+const TOKEN = (process.env.TOKEN);
+const { Client } = require('discord.js-selfbot-v11')
+const client = new Client();
 
-    setInterval(() => {
-      client.user.setStatus(process.env.PRESENCE);
-      const random = statusArray[Math.floor(Math.random() * statusArray.length)].split(', ')
-      const status = random[0];
-      const mode = random[1];
-      client.user.setActivity(status, { type: mode })
+client.on('ready', () => { 
+  client.user.setActivity("Cyberpunk 2077", { type: "PLAYING"})
+   console.log(`${client.user.username} Successfully Logged in!`)
+})
 
-    }, 3000) //your time of changing status in miliseconds for example 1 second = 1000 ms
-});
-
+client.login(TOKEN);
