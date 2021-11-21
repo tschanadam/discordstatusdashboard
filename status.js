@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const token = process.env.TOKEN;
-client.on('ready' () => {
+client.on('ready' () {
    console.log('Ready to go')
   
   var fs = require('fs');
